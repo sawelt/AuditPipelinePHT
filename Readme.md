@@ -1,6 +1,8 @@
 ## PASTA-4-PHT
 
-This repository contains supplementary material for the paper titled ["PASTA-4-PHT: A Pipeline for Automated Security and Technical Audits for the Personal Health Train" by Welten et al.](https://example.com). The available material includes source code in form of Dockerfiles for each step of the pipeline as well as screenshots of the evaluation results that the pipeline generates.
+This repository contains supplementary material for the paper titled ["PASTA-4-PHT: A Pipeline for Automated Security and Technical Audits for the Personal Health Train" by Welten et al.](https://example.com). The available material includes source code in form of Dockerfiles for each step of the pipeline as well as screenshots of the evaluation results that the pipeline generates. The following Diagram shows the infrastructure of the PHT framework and the security audit pipeline, which is subject of this paper:
+
+![Image](/img/PaperRealization.png "Paper Realization Diagram")
 
 ## Related Work
 - ["Multi-Institutional Breast Cancer Detection Using a Secure On-Boarding Service for Distributed Analytics"](https://www.mdpi.com/1603526)
