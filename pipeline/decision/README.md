@@ -63,8 +63,11 @@ In the example from above, the evaluation process looks as follows:
 		- 4.) If false, reject and exit
 	- 5.) If false, reject and exit
 
- visualized in a decision tree diagram:
-![decision_tree.png](/img/decision_tree.png)
+
+ Alternatively, here the standard decision model is visualized in a decision tree diagram:
+
+
+![Image](/img/Decision_tree.png "Decision Tree visualized in a Diagram")
 
     
 
