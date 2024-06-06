@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11505228.svg)](https://doi.org/10.5281/zenodo.11505228)
+
 ## PASTA-4-PHT
 
 This repository contains supplementary material for the paper titled ["PASTA-4-PHT: A Pipeline for Automated Security and Technical Audits for the Personal Health Train" by Welten et al.](https://example.com). The available material includes source code in form of Dockerfiles for each step of the pipeline as well as screenshots of the evaluation results that the pipeline generates. The following Diagram shows the infrastructure of the PHT framework and the security audit pipeline, which is subject of this paper:
