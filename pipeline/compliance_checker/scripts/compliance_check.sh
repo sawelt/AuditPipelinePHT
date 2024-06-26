@@ -4,7 +4,7 @@ ls $1/*.py > train_files.txt
 
 code_to_inject_line_0="import sys"
 code_to_inject_line_1="try:"
-code_to_inject_line_2="\    if not \"padme-conductor\" in sys.modules:"
+code_to_inject_line_2="\    if not \"padme_conductor\" in sys.modules:"
 code_to_inject_line_3="\        print(0)"
 code_to_inject_line_4="\    else:"
 code_to_inject_line_5="\        locals = vars().keys()"
@@ -29,10 +29,10 @@ while read python_file; do
     fi
     line_num=$((line_num+1))
 
-    package_name="padme-conductor"
+    package_name="padme_conductor"
     package_name=$(grep -Po "(?<=import $package_name as )\w+" $python_file)
     if [ -z "$package_name" ]; then
-        package_name="padme-conductor"
+        package_name="padme_conductor"
     fi
 
     code_to_inject_line_6="\        if not any(name in locals for name in dir($package_name)):"
@@ -71,13 +71,12 @@ while read python_file; do
     # exit_code=$(sudo python3 "$python_file")
     exit_code=$(python3 "$python_file")
 
-
     if [ $exit_code -eq 0 ]; then
-        echo "$python_file: No padme-conductor module imported"
+        echo "$python_file: No padme_conductor module imported"
     elif [ $exit_code -eq 1 ]; then
-        echo "$python_file: padme-conductor module was imported, but not used"
+        echo "$python_file: padme_conductor module was imported, but not used"
     elif [ $exit_code -eq 2 ]; then
-        echo "$python_file: padme-conductor module was imported and used"
+        echo "$python_file: padme_conductor module was imported and used"
         was_imported_and_used=$((was_imported_and_used+1))
     else
         echo "$python_file: Runtime error"
@@ -85,12 +84,12 @@ while read python_file; do
 done < train_files.txt
 
 if [ $was_imported_and_used -eq 0 ]; then
-    echo "No train/*.py file imported and used padme-conductor module"
+    echo "No train/*.py file imported and used padme_conductor module"
     # write the exit code to file compliance_report.json
     echo "{\"standards_compliance\": false}" > compliance_report.json
     exit 0
 fi
 
-echo "At least one train/*.py file imported and used padme-conductor module"
+echo "At least one train/*.py file imported and used padme_conductor module"
 echo "{\"standards_compliance\": true}" > compliance_report.json
 exit 0

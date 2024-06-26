@@ -21,3 +21,14 @@ PDF Report Code Annotations (1)       | PDF Report Static Analysis (2)          
 The PDF report is provided through the trainwiki frontend. Here, users can find a comprehensible summary of the audit findings as well as a preview of the more extensive PDF report with the option to download the pdf file. We provide the full pdf report for each train within the _trains_ directory.
 
 ![Image](/img/trainwiki.png "Trainwiki Screenshot")
+
+## Setup
+In order to set up the project, please follow these guidelines:
+
+1. Create a folder for each train in the root directory.
+2. Place the YAML file in the root directory.
+
+For detailed information on the pipeline steps, refer to the [`/pipeline/Readme.md`](/pipeline/Readme.md) file. In the [`/pipeline/Readme.md`](/pipeline/Readme.md) file, you will find code examples for each step. Feel free to choose the steps that are suitable for your needs and create your own file.
+
+## Disclaimer
+Certain components or tools included in this project are provided by third-party vendors and are subject to their respective licenses. Please refer to the documentation or license files accompanying each third-party tool for details on their terms of use and licensing conditions. The licenses of these third-party tools are solely governed by their respective vendors and not by the terms of this project.
